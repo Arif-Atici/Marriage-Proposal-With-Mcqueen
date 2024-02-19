@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Will you marry me Sally?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+        <h1>Benimle evlenir misin?</h1>
+        </div>
+        
+        <div class="img">
+            <img src="mcqueen1.png" height="500" width="1000px" alt="simsek_mcqueen1">
+        </div>
+
+        <div class="button">
+            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+
+            <script>
+                function nextPage() {
+                    window.location.href = "kacov.html";
+                }
+
+                function moveButton() {
+                    var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                    var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                    document.getElementById('noButton').style.left = `${x}px`;
+                    document.getElementById('noButton').style.top = `${y}px`;
+                }
+            </script>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
